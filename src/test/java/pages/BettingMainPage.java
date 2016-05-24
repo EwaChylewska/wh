@@ -7,14 +7,12 @@ import actions.PageActions;
 
 public class BettingMainPage extends PageActions {
 
-
     private BettingMainPageLocators locators;
 
     public BettingMainPage(WebDriver driver) {
         super(driver);
         locators = new BettingMainPageLocators();
     }
-
 
     public FootballPage goToFootballPage() {
         clickElement(locators.footballNav);

@@ -3,11 +3,9 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import locators.FootballCouponsPageLocators;
 
-
 public class FootballCouponsPage extends BettingMainPage {
 
     private FootballCouponsPageLocators locators;
-
 
     FootballCouponsPage(WebDriver driver) {
         super(driver);

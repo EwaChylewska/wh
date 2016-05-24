@@ -7,7 +7,7 @@ import java.util.Properties;
 
 /**
  * Property reader reads the properties from config.properties file. Currently there are two available properties:
- * browser - where the tests should run (chrome = desktop chrome, mobile = mobile emulation)
+ * browser - mode of tests (chrome = desktop chrome, mobile = mobile emulation)
  * timeout - how long WebDriver should wait for the elements (in seconds). Set to 2, but it is recommended to increase
  * the value if the tested website is under heavy load.
  */

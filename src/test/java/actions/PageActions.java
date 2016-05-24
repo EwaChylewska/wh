@@ -17,8 +17,11 @@ public abstract class PageActions {
     private final WebDriverWait wait;
 
     /**
-     * Page Actions constructor. Uses the driver created fo given scenario and creates WebDriverWait (FluentWait)  with timeout
+     * Page Actions constructor. Uses the driver created for given scenario and creates WebDriverWait (FluentWait)  with timeout
      * read from config.properties file
+     *
+     * I use fluent wait in most cases instead of WebDriver.findElement, because I think it is more versatile solution and can be
+     * easily adjusted to long loading pages.
      *
      * @param driver driver
      */
@@ -31,8 +34,8 @@ public abstract class PageActions {
 
     /**
      * Clicks element with given locator. I used ExpectedConditions.elementToBeClickable predicate before, but I noticed that elements
-     * on the WH page tends to be clickable before they are visible (tested around 10pm, when the page was loading really slow), so I
-     * changed to ExpectedConditions.visibilityOfElementLocated.
+     * on the WH page tends to be clickable before they are visible (tested around 10pm, when the page was loading really slow),
+     * so I've changed that to ExpectedConditions.visibilityOfElementLocated.
      *
      * @param by locator
      */
@@ -85,7 +88,6 @@ public abstract class PageActions {
     protected String getElementsText(By by) {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(by)).getText();
     }
-
 
     /**
      * Reads attribute value from the element. Note: the element does not have to be visible.

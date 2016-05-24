@@ -1,7 +1,5 @@
 package util;
 
-
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -10,23 +8,23 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.util.HashMap;
 import java.util.Map;
 
-
 public class DriverFactory {
 
     private static WebDriver driver;
-
 
     public DriverFactory() {
         initialize();
     }
 
     /**
-     * Creates new driver instance if there is none yet. The driver is created either for desktop chrome or
-     * mobile emulation, based on property browser in config.properties file.
+     * Creates new driver instance if there is none yet.
+     * The driver is created either for desktop chrome or mobile emulation,
+     * based on property browser in config.properties file.
      */
     private void initialize() {
-        if (driver == null)
+        if (driver == null) {
             createNewDriverInstance();
+        }
     }
 
     private void createNewDriverInstance() {
@@ -55,10 +53,13 @@ public class DriverFactory {
     }
 
     /**
-     * Creates driver instance for mobile emulation. Only device metrics are set, because adding userAgent causes problems
-     * with non standard number keyboard that appears when typing bet stake. Input field is set then to read-only, and the keyboard
-     * does not react to click action. Probably touch action should be performed. If I were to automate it in "real life"
-     * I'll go talk to developers and ask them for event listeners that they are using.
+     * Creates driver instance for mobile emulation.
+     * Only device metrics are set, because adding userAgent causes problems
+     * with non standard number keyboard that appears when typing bet stake.
+     * Input field is set then to read-only, and the keyboard
+     * does not react to click action. Probably a touch action should be performed.
+     * If I were to automate it in "real life" I would talk to developers
+     * and ask them which event listeners they are using to handle the keyboard.
      *
      * When only device metrics are set, the keyboard does not appear at all - the emulation is not treated as mobile device.
      */

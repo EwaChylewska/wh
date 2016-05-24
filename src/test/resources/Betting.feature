@@ -12,9 +12,9 @@ Feature: Betting
       | competition               | match               | stake        | winner    |
       | Euro 2016 & International | Slovakia vs England | 0.05         | Slovakia  |
 
-## other examples on which I ran tests to validate my solution
-#      | Double Chance             | Hull vs Sheff Wed   | 0.05         | Sheff Wed |
-#      | Euro 2016 & International | Slovakia vs England | 10000        | England   |
-#      | Euro 2016 & International | Belgium vs Italy    | 0.01         | Italy     |
-#      | Euro 2016 & International | Russia vs Slovakia  | 99999999999  | Russia    |
-#      | Euro 2016 & International | Slovakia vs England | 100000000000 | Slovakia  |
+# other examples on which I ran tests to validate my solution
+      | Double Chance             | Hull vs Sheff Wed   | 0.05         | Sheff Wed |
+      | Euro 2016 & International | Slovakia vs England | 10000        | England   |
+      | Euro 2016 & International | Belgium vs Italy    | 0.01         | Italy     |
+      | Euro 2016 & International | Russia vs Slovakia  | 99999999999  | Russia    |
+      | Euro 2016 & International | Slovakia vs England | 100000000000 | Slovakia  |

@@ -3,7 +3,6 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import locators.FootballPageLocators;
 
-
 public class FootballPage extends BettingMainPage {
 
     private FootballPageLocators locators;

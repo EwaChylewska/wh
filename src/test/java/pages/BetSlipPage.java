@@ -3,7 +3,6 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import locators.BetSlipPageLocators;
 
-
 public class BetSlipPage extends BettingMainPage {
 
     private BetSlipPageLocators locators;

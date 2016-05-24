@@ -8,12 +8,6 @@ import java.text.DecimalFormat;
  */
 public class BetCounter {
 
-
-    private double convertFractionToDouble(String fraction){
-        String[] fractionAray = fraction.split("/");
-        return Double.parseDouble(fractionAray[0]) / Double.parseDouble(fractionAray[1]);
-    }
-
     /**
      * Counts and formats returns for given stake and odds.
      * @param stake string stake
@@ -26,6 +20,12 @@ public class BetCounter {
         double expectedReturns = stakeDouble + stakeDouble * odds;
         DecimalFormat decimalFormat = new DecimalFormat("0.00");
         decimalFormat.setRoundingMode(RoundingMode.DOWN);
+
         return decimalFormat.format(expectedReturns).replace(',', '.');
+    }
+
+    private double convertFractionToDouble(String fraction){
+        String[] fractionAray = fraction.split("/");
+        return Double.parseDouble(fractionAray[0]) / Double.parseDouble(fractionAray[1]);
     }
 }
